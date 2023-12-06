@@ -1,2 +1,15 @@
 #!/bin/bash
-0 string SCHOOL School
+# school.mgc
+
+# Execute a shell command to categorize the file
+!:mime application/octet-stream
+:ext: sh
+    !/bin/sh
+    # Specify the path to the magic file
+    MAGIC_FILE="school.mgc"
+
+    # Use the file command with the magic file
+    result=$(file -d "$MAGIC_FILE" "$1")
+
+    # Print the result
+    echo "$1: $result"
