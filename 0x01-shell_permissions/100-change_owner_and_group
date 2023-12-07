@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown root:alex .
+sudo chown vincent:staff .
